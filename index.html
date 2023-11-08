@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Step Form</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row text-center"></div>
+    </div>
+    <div class="container">
+      <div class="row col-lg-6 col-md-10 col-12 bg mx-auto pt-5 pb-5">
+        <div class="col-12 text-center mb-5">
+          <h1 class="text-uppercase fw-bold">multi-step form</h1>
+        </div>
+        <div class="col-12 mb-5 text-center">
+          <div class="steps-container">
+            <button class="step-btn btn active" data-step="1">
+              <span class="text-desk">Step</span> <span>1</span>
+            </button>
+            <button class="step-btn btn" data-step="2">
+              <span class="text-desk">Step</span> <span>2</span>
+            </button>
+            <button class="step-btn btn" data-step="3">
+              <span class="text-desk">Step</span> <span>3</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <form class="form-container">
+            <div class="form-content form-content-1 form-content-active">
+              <h4 class="text-center mb-5">General Information</h4>
+              <input
+                type="text"
+                class="gen-info-inp"
+                name="fullName"
+                id="fullName"
+                placeholder="full name"
+              />
+              <input
+                type="email"
+                class="gen-info-inp"
+                placeholder="email address"
+                name="email"
+                id="email"
+              />
+
+              <div class="btn-container">
+                <button class="nextBtn">Next</button>
+              </div>
+            </div>
+            <div class="form-content form-content-2 text-center">
+              <h4 class="text-center mb-5">Image Upload</h4>
+              <img
+                width="250"
+                class="mx-auto"
+                id="imagePreview"
+                src=""
+                alt="Image Preview"
+                style="display: none"
+              />
+              <img
+                src="/assets/avatar.png"
+                class="img-fluid avatar-img"
+                alt="avatar"
+                width="150"
+              />
+              <input
+                type="file"
+                id="fileInput"
+                accept="image/*"
+                class="mb-5 mx-auto mt-5"
+              />
+
+              <div class="btn-container">
+                <button class="prevBtn">Back</button>
+                <button class="nextBtn">Next</button>
+              </div>
+            </div>
+            <div class="form-content form-content-3">
+              <h4 class="text-center mb-5">Terms & Conditions</h4>
+              <div class="terms-container">
+                <p>
+                  Welcome to Website Name! These terms and conditions outline
+                  the rules and regulations for the use of Company Name's
+                  Website, located at Website.com. By accessing this website we
+                  assume you accept these terms and conditions. Do not continue
+                  to use Website Name if you do not agree to take all of the
+                  terms and conditions stated on this page. The following
+                  terminology applies to these Terms and Conditions, Privacy
+                  Statement and Disclaimer Notice and all Agreements: “Client”,
+                  “You” and “Your” refers to you, the person log on this website
+                  and compliant to the Company's terms and conditions. “The
+                  Company”, “Ourselves”, “We”, “Our” and “Us”, refers to our
+                  Company. “Party”, “Parties”, or “Us”, refers to both the
+                  Client and ourselves. All terms refer to the offer, acceptance
+                  and consideration of payment necessary to undertake the
+                  process of our assistance to the Client in the most
+                  appropriate manner for the express purpose of meeting the
+                  Client's needs in respect of provision of the Company's stated
+                  services, in accordance with and subject to, prevailing law of
+                  Netherlands. Any use of the above terminology or other words
+                  in the singular, plural, capitalization and/or he/she or they,
+                  are taken as interchangeable and therefore as referring to
+                  same.
+                </p>
+                <p>
+                  <b>Cookies</b>
+                  We employ the use of cookies. By accessing Website Name, you
+                  agreed to use cookies in agreement with the Company Name's
+                  Privacy Policy. Most interactive websites use cookies to let
+                  us retrieve the user's details for each visit. Cookies are
+                  used by our website to enable the functionality of certain
+                  areas to make it easier for people visiting our website. Some
+                  of our affiliate/advertising partners may also use cookies.
+                </p>
+                <p>
+                  <b>License</b>
+                  Unless otherwise stated, Company Name and/or its licensors own
+                  the intellectual property rights for all material on Website
+                  Name. All intellectual property rights are reserved. You may
+                  access this from Website Name for your own personal use
+                  subjected to restrictions set in these terms and conditions.
+                </p>
+                <input
+                  type="checkbox"
+                  name="terms"
+                  id="terms"
+                  class="d-inline-block"
+                />
+                <label for="terms" class="d-inline">
+                  <em
+                    >By checking this box, you agree to our terms and
+                    conditions.</em
+                  ></label
+                >
+              </div>
+              <div class="btn-container">
+                <button class="prevBtn">Back</button>
+                <button class="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="err-container">
+            <p class="err-msg"></p>
+          </div>
+
+          <div class="data-container text-center">
+            <h4 class="mb-4">Thank you for your application</h4>
+            <h6 class="mb-5"><u>Here are your details</u></h6>
+
+            <table class="w-100">
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Photo</th>
+              </tr>
+              <tr>
+                <td id="nameData"></td>
+                <td id="emailData"></td>
+                <td><img id="imgData" src="" alt="user-pic" width="100" /></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
